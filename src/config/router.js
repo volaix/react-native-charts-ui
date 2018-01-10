@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, Button } from 'react-native'
-import { TabNavigator } from 'react-navigation'
+import { StackNavigator, TabNavigator } from 'react-navigation'
 import { MAIN_COLOR } from '../sharedColors';
 
 class RecentChatsScreen extends React.Component {
@@ -11,17 +11,45 @@ class RecentChatsScreen extends React.Component {
 
 class AllContactsScreen extends React.Component {
   render() {
-    return <Text>List of all contacts</Text>
+    return (
+<View>
+      <Text>List of all contacts</Text>
+      <Button
+        onPress={() => this.props.navigation.navigate('Chat', { user: 'Lucy' })}
+        title="Chat with Lucy"
+      />
+</View>
+)
   }
 }
 
-const RootNavigator = TabNavigator({
+class ChatScreen extends React.Component {
+  render() {
+    return (
+<View>
+      <Text>List of all contacts</Text>
+      <Text>You're now chatting with Lucy</Text>
+      <Button
+        onPress={() => this.props.navigation.navigate('Chat', { user: 'Lucy' })}
+        title="Chat with Lucy"
+      />
+</View>
+)
+  }
+}
+
+const MainTabNavigator = TabNavigator({
   Recent: { screen: RecentChatsScreen },
   All: { screen: AllContactsScreen },
 })
 
-const SimpleApp = StackNavigator({
-  Home: { screen: MainScreenNavigator },
+const RootNavigator = StackNavigator({
+  Home: { 
+    screen: MainTabNavigator,
+    navigationOptions: {
+      title: 'My Chats',
+    },
+  },
   Chat: { screen: ChatScreen },
 })
 

@@ -4,10 +4,11 @@
 2. Publish to iOS and android store
 3. Use flow
 4. Use GraphQL
-5. Nested Navigation
+5. <del>Nested Navigation</del> (Complete!)
 6. Deep Linking w/ Redux
 7. Super comfortable with saga
 8. Tests in jest
+9. Use ESLint
 
 ## Adding Flow
 
