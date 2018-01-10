@@ -7,8 +7,12 @@
 5. <del>Nested Navigation</del> (Complete!)
 6. Deep Linking w/ Redux
 7. Super comfortable with saga
-8. Tests in jest
-9. Use ESLint
+8. Tests in Jest (atleast for api)
+9. <del>Use ESLint</del> (Issues with yarn and airbnb)
+
+### Stretch Goals
+
+1. Chart animations
 
 ## Adding Flow
 
