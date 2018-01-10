@@ -1,10 +1,7 @@
 import React from 'react'
 import { View, Text, Button } from 'react-native'
 import { TabNavigator } from 'react-navigation'
-import InfoScreen from '../screens/InfoScreen'
-import HomeScreen from '../screens/HomeScreen'
-import ArticleScreen from '../screens/ArticleScreen'
-import { MAIN_COLOR, TEXT_DARKGREY } from './sharedColors';
+import { MAIN_COLOR } from '../sharedColors';
 
 class RecentChatsScreen extends React.Component {
   render() {
@@ -21,6 +18,11 @@ class AllContactsScreen extends React.Component {
 const RootNavigator = TabNavigator({
   Recent: { screen: RecentChatsScreen },
   All: { screen: AllContactsScreen },
-});
+})
+
+const SimpleApp = StackNavigator({
+  Home: { screen: MainScreenNavigator },
+  Chat: { screen: ChatScreen },
+})
 
 export default RootNavigator
