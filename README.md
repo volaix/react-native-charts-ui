@@ -1,4 +1,3 @@
-Victory Charts
 ![jan-11-2018 13-55-48](https://user-images.githubusercontent.com/16506248/34810583-45737574-f6d7-11e7-8fff-0c3b860fc28a.gif)
 
 ## Objectives of this project
@@ -16,6 +15,12 @@ Victory Charts
 ### Stretch Goals
 
 1. Chart animations
+
+## Victory Charts
+Nice, but I find the styling options (moving ticks) limiting.
+
+## D3
+Importing D3 Seems to be broken. Possibly due to https://github.com/facebook/react-native/issues/7170
 
 ## Adding Flow
 
