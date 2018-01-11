@@ -8,9 +8,9 @@ import ResultScreen from '../screens/ResultScreen'
 import ChatScreen from '../screens/ChatScreen'
 
 const MainTabNavigator = TabNavigator({
+  Result: { screen: ResultScreen },
   Asset: { screen: RecentChatsScreen },
   When: { screen: AllContactsScreen },
-  Result: { screen: ResultScreen },
 })
 
 const RootNavigator = StackNavigator({
