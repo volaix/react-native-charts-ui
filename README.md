@@ -1,3 +1,6 @@
+Victory Charts
+![jan-11-2018 13-55-48](https://user-images.githubusercontent.com/16506248/34810583-45737574-f6d7-11e7-8fff-0c3b860fc28a.gif)
+
 ## Objectives of this project
 
 1. Make nice charts with bitcoin
