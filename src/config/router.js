@@ -17,7 +17,7 @@ const RootNavigator = StackNavigator({
   Home: { 
     screen: MainTabNavigator,
     navigationOptions: {
-      title: 'Predictor',
+      title: 'VictoryCharts',
     },
   },
   Chat: { screen: ChatScreen },
