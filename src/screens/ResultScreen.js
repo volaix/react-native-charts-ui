@@ -15,17 +15,17 @@ class ResultScreen extends React.Component {
       <View>
         <Text>You would've made this much!!!</Text>
         <VictoryChart
-        domain={{x: [0, 4], y: [0, 40000]}}
-          domainPadding={80} 
+          domain={{ x: [0, 4], y: [0, 40000] }}
+          domainPadding={{ x: [10, 70], y: 10 }}
+          padding={{ top: 10, bottom: 50, left: 60, right: 60 }}
         >
-          <VictoryAxis 
-          tickFormat={["Q1", "Q2", "Q3", "Q4"]}
+          <VictoryAxis
+            tickFormat={["Q1", "Q2", "Q3", "Q4"]}
           />
-          <VictoryAxis 
-          dependentAxis
-          //tickFormat expects an array
-          tickFormat={(x) => (`$${x / 1000}k`)}
-          // offsetX={0}
+          <VictoryAxis
+            dependentAxis
+            style={{ ticks: { padding: 25 } }}
+            tickFormat={(x) => (`$${x / 1000}k`)}
           />
           <VictoryBar
             data={data}
