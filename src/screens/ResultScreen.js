@@ -1,7 +1,8 @@
 import React from 'react'
-import { ART, Text, View } from 'react-native'
+import { ART, Text, View, TouchableWithoutFeedback } from 'react-native'
 import * as shape from 'd3-shape';
 import * as scale from 'd3-scale';
+import styled from "styled-components/native"
 
 const d3 = {
   scale,
@@ -14,6 +15,10 @@ const {
   Shape,
 } = ART;
 
+const StyledView = styled.View`
+  background-color: 'rgb(4,45,60)';
+`
+
 class ResultScreen extends React.Component {
   componentDidMount() {
     var arc = d3.shape.arc()
@@ -21,33 +26,37 @@ class ResultScreen extends React.Component {
       .outerRadius(100)
       .startAngle(0)
       .endAngle(Math.PI / 2);
-
+    console.log(`hello world`)
     console.log('arc:', arc())
-
   }
+
+  onPressBox = () => {
+    console.log('helloworld')
+  }
+
   render() {
     return (
-      <View>
+      <StyledView >
 
         <Text>New Charts go here</Text>
 
-        <Surface 
-        width={1000} 
-        height={600} 
-        style={{ backgroundColor:'lightgrey' }}
-       >
-          <Group>
-          <Shape
-            d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80"
-            stroke="#000"
-            strokeWidth={1}
-            />
-          </Group>
-        </Surface>
+          <Surface
+            width={200}
+            height={200}
+            style={{ backgroundColor: 'lightgrey' }}
+          >
+            <Group>
+              <Shape
+                d="M10,10 H120 v40 h-30 Z"
+                stroke="#000"
+                strokeWidth={2}
+              />
+            </Group>
+          </Surface>
 
         <Text>Text under surface</Text>
 
-      </View>
+      </StyledView>
     )
   }
 }
